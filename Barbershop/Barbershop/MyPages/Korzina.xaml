@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barbershop.MyPages.Korzina"
+             BackgroundImageSource="stena.jpg" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="list" 
+                     SeparatorVisibility="None"
+              HasUnevenRows="True"
+                        SelectionMode="Single" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid Margin="5,10,5,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding GetImage}" Aspect="AspectFit" HeightRequest="100"/>
+                                <StackLayout Grid.Column="1">
+                                    <StackLayout Orientation="Horizontal" Margin="5">
+                                        <Label WidthRequest="200" FontSize="18" Text="{Binding Name,StringFormat='Наименование: {0}'}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Margin="5">
+                                        <Label WidthRequest="200" FontSize="18" Text="{Binding NameTypeService,StringFormat='Тип: {0}'}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Margin="5">
+                                        <Label WidthRequest="200" FontSize="18" Text="{Binding Price,StringFormat='Стоимость: {0}'}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Приобрести услуги" Clicked="Button_Clicked_2" BackgroundColor="Green" Margin="5" CornerRadius="10" Grid.Row="1"/>
+        <Button Text="Очистить корзину" Clicked="Button_Clicked_3" BackgroundColor="Green" Margin="5" CornerRadius="10" Grid.Row="2"/>
+    </Grid>
+</ContentPage>

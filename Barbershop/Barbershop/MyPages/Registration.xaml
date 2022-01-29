@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barbershop.MyPages.Registration"
+             BackgroundImageSource="stena.jpg">
+    <ScrollView  HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Логин: " FontSize="18"/>
+                <Entry Placeholder="Введите логин" x:Name="entryLogin" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Пароль: " FontSize="18"/>
+                <Entry Placeholder="Введите пароль" x:Name="entryPassword" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Фамилия: " FontSize="18"/>
+                <Entry Placeholder="Введите фамилию" x:Name="entrySurname" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Имя: " FontSize="18"/>
+                <Entry Placeholder="Введите имя" x:Name="entryName" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Отчество: " FontSize="18"/>
+                <Entry Placeholder="Введите отчество" x:Name="entryPatronymic" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Номер телефона: " FontSize="18"/>
+                <Entry Placeholder="Введите номер телефона" x:Name="entryNumberPhone" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Адресс: " FontSize="18"/>
+                <Entry Placeholder="Введите адресс" x:Name="entryAddress" FontSize="18" WidthRequest="200" Text=""/>
+            </StackLayout>
+            <Button Margin="5" FontSize="18" Text="Зарегистрировать" BackgroundColor="Green" Clicked="Button_Clicked" WidthRequest="200"/>
+            <Button Margin="5" FontSize="18" Text="Отмена" BackgroundColor="Green" Clicked="Button1_Clicked" WidthRequest="200"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

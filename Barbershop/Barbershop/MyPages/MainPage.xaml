@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barbershop.MainPage"
+             BackgroundImageSource="stena.jpg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.45*"></RowDefinition>
+            <RowDefinition Height="0.55*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="0.9*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="logotip22.png" HorizontalOptions="Center" Grid.Column="1" Aspect="Fill" Margin="0,5,0,0" Grid.Row="0"></Image>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,15,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.16*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Text="Посмотреть на заказы" BackgroundColor="Green" Grid.Column="1" Grid.Row="0" FontSize="18" CornerRadius="20" Clicked="Button_Clicked_3" Margin="0,15,0,0">
+            </Button>
+            <Button Text="Запись на прием" BackgroundColor="Green" Grid.Column="1" Grid.Row="1" FontSize="18" CornerRadius="20" Clicked="Button_Clicked_1" Margin="0,15,0,0">
+            </Button>
+            <Button Text="Всё о нас" BackgroundColor="Green" CornerRadius="20" FontSize="18" Grid.Column="1" Grid.Row="2" Clicked="Button_Clicked_2" Margin="0,15,0,0">
+            </Button>
+        </Grid>
+    </Grid>
+
+</ContentPage>
